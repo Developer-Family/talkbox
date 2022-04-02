@@ -1,10 +1,10 @@
-use poem::{post, test::TestClient, Route};
+use poem::test::TestClient;
 
-use super::{create::create_room, payloads::RoomCreated};
+use super::{create::create_room_handler, payloads::RoomCreated};
 
 #[tokio::test]
 async fn hello_test() {
-    let route = Route::new().at("/rooms", post(create_room));
+    let route = create_room_handler();
 
     let cli = TestClient::new(route);
 

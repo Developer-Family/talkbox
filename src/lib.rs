@@ -1,12 +1,12 @@
-use poem::{listener::TcpListener, post, Route, Server};
+use poem::{listener::TcpListener, Server};
 
-use crate::handlers::create::create_room;
+use crate::handlers::create::create_room_handler;
 
 mod handlers;
 mod models;
 
 pub async fn start_server() -> Result<(), std::io::Error> {
-    let app = Route::new().at("/room", post(create_room));
+    let app = create_room_handler();
 
     println!("Starting server on address 127.0.0.1:3000");
 
