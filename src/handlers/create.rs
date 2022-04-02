@@ -1,12 +1,10 @@
 /*
-POST /rooms
-GET /rooms
-GET /rooms/:room_id
-GET /rooms/:room_id/messages
+- [x] POST /rooms
+- [] GET /rooms
+- [] GET /rooms/:room_id
+- [] GET /rooms/:room_id/messages
 
-POST /messages { room_id, message }
-
-/hello/toto
+- [] POST /messages { room_id, message }
  */
 
 use poem::web::Json;
