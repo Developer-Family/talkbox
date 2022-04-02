@@ -1,6 +1,6 @@
 use poem::{listener::TcpListener, post, Route, Server};
 
-use crate::handlers::create_room;
+use crate::handlers::create::create_room;
 
 mod handlers;
 mod models;
