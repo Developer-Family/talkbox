@@ -4,6 +4,8 @@ use crate::handlers::create::create_room_handler;
 
 mod handlers;
 mod models;
+#[macro_use]
+extern crate lazy_static;
 
 pub async fn start_server() -> Result<(), std::io::Error> {
     let app = create_room_handler();

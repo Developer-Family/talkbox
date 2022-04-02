@@ -3,7 +3,7 @@ use uuid::Uuid;
 
 use super::{chatter::ChatterId, message::MessageId};
 
-#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
+#[derive(Debug, Serialize, Deserialize, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct RoomId(Uuid);
 
 #[derive(Debug, Serialize, Deserialize)]
