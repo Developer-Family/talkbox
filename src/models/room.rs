@@ -4,9 +4,9 @@ use uuid::Uuid;
 use super::{chatter::ChatterId, message::MessageId};
 
 #[derive(Debug, Serialize, Deserialize, Clone, Copy, PartialEq, Eq, Hash)]
-pub struct RoomId(Uuid);
+pub struct RoomId(pub Uuid);
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Room {
     id: RoomId,
     chatter_ids: Vec<ChatterId>,

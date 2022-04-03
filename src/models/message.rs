@@ -3,7 +3,7 @@ use uuid::Uuid;
 
 use super::chatter::ChatterId;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
 pub struct MessageId(Uuid);
 
 #[derive(Debug, Serialize, Deserialize)]
